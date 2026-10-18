@@ -1,0 +1,578 @@
+/*GENERAL STYLING*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+}
+
+
+/*NAVIGATION BAR*/
+
+header {
+    width: 100%;
+    background-color: rgba(11, 31, 58, 0.96);
+    color: white;
+    padding: 18px 7%;
+    border-bottom: 2px solid #247BFD;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo::first-letter {
+    color: #398BFF;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    overflow: visible;
+}
+
+.nav-links li {
+    float: none;
+}
+
+.nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #247BFD;
+    color: white;
+}
+
+
+/*HOMEPAGE BACKGRO*/
+
+body:has(.home) {
+    min-height: 100vh;
+    background-image:
+        linear-gradient(
+            rgba(5, 15, 35, 0.70),
+            rgba(5, 15, 35, 0.80)
+        ),
+        url("../images/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+
+/*HOMEPAGE CONTENT*/
+
+.home {
+    max-width: 1000px;
+    margin: 100px auto 20px;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.home h1 {
+    color: white;
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.3;
+    margin-bottom: 25px;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home h4 {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #E5EEFA;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 1.9;
+}
+
+.home p {
+    margin-bottom: 0;
+}
+
+
+/*HOMEPAGE BUTTONS*/
+
+body:has(.home) > button {
+    display: inline-block;
+    background-color: #247BFD;
+    border: 2px solid #247BFD;
+    border-radius: 8px;
+    padding: 12px 24px;
+    margin: 15px 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+body:has(.home) > button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body:has(.home) > button:hover {
+    background-color: transparent;
+    border-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body:has(.home) > button:nth-of-type(2) {
+    background-color: transparent;
+    border-color: white;
+}
+
+body:has(.home) > button:nth-of-type(2):hover {
+    background-color: #247BFD;
+    border-color: #247BFD;
+}
+
+
+/* LOGIN AND SIGNUP CONTAINER*/
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+}
+
+.logo2 {
+    display: block;
+    margin: 0 auto 20px;
+    width: 50px;
+    height: 50px;
+    place-items: center;
+    background: rgb(28, 28, 225);
+    border-radius: 12%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.subtitle,
+.login {
+    text-align: center;
+}
+
+.container h1 {
+    color: #333;
+    margin: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+}
+
+.input-group {
+    margin-bottom: 17px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.terms {
+    display: flex;
+    gap: 8px;
+    color: gray;
+    margin: 20px 0;
+    font-size: 12px;
+}
+
+.login {
+    margin-top: 20px;
+}
+
+.container a {
+    color: #5e49c9;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+
+/*GENERAL BUTTONS FOR OTHER PAGES */
+
+button {
+    background-color: lightskyblue;
+    text-align: center;
+    color: black;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #443da7;
+    transform: translateY(-2px);
+}
+
+
+/*GENERAL HEADER AND NAVIGATION FOR OTHER PAGES*/
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #D6E4F0;
+    margin: 5px 0 20px;
+}
+
+nav:not(.navbar) {
+    background-color: #1565C0;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+nav:not(.navbar) a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav:not(.navbar) a:hover {
+    color: #BBD9FF;
+    text-decoration: underline;
+}
+
+div[id] {
+    padding: 45px 8%;
+    scroll-margin-top: 15px;
+}
+
+h2 {
+    color: #1565C0;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+h3 {
+    color: #0B1F3A;
+    margin: 15px 0 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+
+#home {
+    text-align: center;
+    background-color: #F1F6FC;
+    padding: 70px 8%;
+}
+
+#home h2 {
+    font-size: 38px;
+    color: #0B1F3A;
+}
+
+#home img {
+    max-width: 100%;
+    height: auto;
+    margin: 25px 0;
+    border-radius: 10px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: #1565C0;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#home a:hover {
+    background-color: #0B1F3A;
+}
+
+
+
+#about {
+    background-color: white;
+}
+
+
+
+
+#services {
+    background-color: #F1F6FC;
+}
+
+#services div {
+    background-color: white;
+    border: 1px solid #D6E4F0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#services img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+
+#products {
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #1565C0;
+    color: white;
+}
+
+th,
+td {
+    border: 1px solid #B8C7D9;
+    padding: 15px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #F1F6FC;
+}
+
+
+
+#video {
+    background-color: #F1F6FC;
+}
+
+iframe {
+    max-width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+
+#contact {
+    background-color: white;
+}
+
+form {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #AABBD0;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #1565C0;
+    border-color: #1565C0;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #1565C0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0B1F3A;
+}
+
+
+/*FOOTER*/
+
+footer {
+    background-color: #0B1F3A;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h3 {
+    color: white;
+}
+
+footer a {
+    color: #BBD9FF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBILE RESPONSIVENESS*/
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .home {
+        margin-top: 65px;
+        padding: 20px 15px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home h4 {
+        font-size: 15px;
+    }
+
+    nav:not(.navbar) a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    #home h2 {
+        font-size: 28px;
+    }
+
+    div[id] {
+        padding: 30px 5%;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 24px 18px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        gap: 2px;
+    }
+
+    .nav-links li a {
+        padding: 7px;
+        font-size: 12px;
+    }
+
+    .home h1 {
+        font-size: 27px;
+    }
+
+    body:has(.home) > button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
